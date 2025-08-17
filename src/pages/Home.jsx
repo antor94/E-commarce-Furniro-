@@ -3,21 +3,19 @@ import Banner from '../components/Banner'
 import Browse from '../components/Browse'
 import Product from '../components/products'
 import Furniture from '../components/furniture'
-import SinglePage from './SinglePage'
-import Account from './Account'
+
 
 
 const Home = () => {
   return (
     <>
     
-   {/* <Banner />
+   <Banner />
    <Browse />
    <Product />
-   <Furniture /> */}
+   <Furniture />
 
-{/* <SinglePage />*/}
-<Account />
+
 
     </>
   )
