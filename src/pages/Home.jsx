@@ -1,18 +1,24 @@
 import React from 'react'
-import Contact from './Contact'
-import Cart from './Cart'
-import Checkout from './Checkout'
+import Banner from '../components/Banner'
+import Browse from '../components/Browse'
+import Product from '../components/products'
+import Furniture from '../components/furniture'
+import SinglePage from './SinglePage'
+import Account from './Account'
+
 
 const Home = () => {
   return (
     <>
     
-    
-    {/* <Contact /> */}
-    {/* <Cart /> */}
-    <Checkout />
-    
-    
+   {/* <Banner />
+   <Browse />
+   <Product />
+   <Furniture /> */}
+
+{/* <SinglePage />*/}
+<Account />
+
     </>
   )
 }

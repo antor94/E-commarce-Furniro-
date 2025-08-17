@@ -1,6 +1,7 @@
 import React from 'react'
 import cartimg from '../assets/images/cartimg.png'
 import { MdDelete } from "react-icons/md";
+import BreadCrum from '../components/common/BreadCrum';
 
 const Cart = () => {
   return (
@@ -8,6 +9,7 @@ const Cart = () => {
     
     
     <section id='cart'>
+            <div><BreadCrum /></div>
         <div className="container">
             <div id='cart-row' className='flex justify-around '>
                 {/* ------------ left-side */}
