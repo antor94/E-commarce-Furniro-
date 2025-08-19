@@ -22,7 +22,7 @@ const Footer = () => {
                         <Link className='text-[16px] font-medium font-popins text-[#000]' to={'/'} >Home</Link>
                         <Link className='text-[16px] font-medium font-popins text-[#000]' to={'/'} >Shop</Link>
                         <Link className='text-[16px] font-medium font-popins text-[#000]' to={'/'} >About</Link>
-                        <Link className='text-[16px] font-medium font-popins text-[#000]' to={'/'} >Contact</Link>
+                        <Link className='text-[16px] font-medium font-popins text-[#000]' to={'/contact'} >Contact</Link>
                         </div>
                     </div>
                               <div className='flex flex-col'>

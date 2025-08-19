@@ -22,7 +22,6 @@ const Furniture = () => {
                     <p className='text-[20px] font-semibold font-popins text-[#616161]'>Share your setup with</p>
                     <h2 className='text-[40px] font-bold font-popins text-[#3A3A3A]'>#FuniroFurniture</h2>
                 </div>
-
                 {/* ------------- all product images */}
                 <div className='flex justify-between relative'>
                   {/* ---------- left-side */}
@@ -51,14 +50,7 @@ const Furniture = () => {
                   <div><img src={img8} alt="furniture-img" /></div>
                         </div>     
                   </div>
-    
-                
-                
-
                 </div>
-
-
-
             </div>
     </section>
     

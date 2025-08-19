@@ -5,8 +5,7 @@ const Banner = () => {
   return (
     <>
     
-    <section  style={{
-          background: `URL(${bannerbg})`, backgroundRepeat: `no-repeat`,  backgroundSize: `cover`,}} id='banner' className='h-[716px] relative'>
+    <section  style={{ background: `URL(${bannerbg})`, backgroundRepeat: `no-repeat`,  backgroundSize: `cover`,}} id='banner' className='h-[716px] relative'>
         <div className="container">
             <div id='banner-row' className='w-[643px]  bg-[#FFF3E3] rounded-[10px] absolute top-[123px] right-[123px] z-20 '>
                 <div className='pt-[62px] pr-[43px] pb-[37px] pl-[39px]'>

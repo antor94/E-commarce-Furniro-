@@ -1,11 +1,13 @@
 import React from 'react'
 import SuppotCommon from '../components/common/SuppotCommon'
+import BreadCrum from '../components/common/BreadCrum'
 
 const Contact = () => {
   return (
     <>
     
     <section id='contact'>
+        <BreadCrum breadContent={'Contact'} />
         <div className="container">
             <div id='contact-row' className='pt-[98px]'>
                 {/* ----------------- heading */}

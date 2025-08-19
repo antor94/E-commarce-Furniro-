@@ -7,7 +7,7 @@ const Account = () => {
     
     
     <section id='account'>
-      <BreadCrum />
+      <BreadCrum breadContent={'Account'} />
         <div className="container">
             <div id='account-row' className='pt-[63px] pb-[67px] flex justify-around '>
               {/* ---------- login  */}

@@ -1,4 +1,5 @@
 import React from 'react'
+import BreadCrum from '../components/common/BreadCrum'
 
 const Checkout = () => {
   return (
@@ -6,6 +7,7 @@ const Checkout = () => {
     
     
     <section id='checkout'>
+      <BreadCrum breadContent={'CheckOut'} />
         <div className="container">
             <div id='checkout-row' className='flex justify-around pb-[52px] pt-[97px] '>
                 {/* ----------------- left-side */}

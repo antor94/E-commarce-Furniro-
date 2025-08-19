@@ -1,15 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import cartimg from '../assets/images/cartimg.png'
 import { MdDelete } from "react-icons/md";
 import BreadCrum from '../components/common/BreadCrum';
+import { Link, useParams } from 'react-router';
+import axios from 'axios';
 
-const Cart = () => {
+const CartPage = () => {
+
+const perams = useParams()
+
+
+// ------------------ api fatch
+
+const[Product , setProduct] = useState([])
+useEffect(()=>{
+    axios.get(`https://api.escuelajs.co/api/v1/products/${perams.productId}`)
+.then((res)=>{setProduct(res.data)})
+.catch((err)=>{console.log(err)})
+} , [])
+
+console.log(perams)
+
+console.log(Product)
+
   return (
     <>
     
     
-    <section id='cart'>
-            <div><BreadCrum /></div>
+    <section id='cartPage'>
+            <BreadCrum breadContent={'CartPage'} />
         <div className="container">
             <div id='cart-row' className='flex justify-around '>
                 {/* ------------ left-side */}
@@ -28,7 +47,7 @@ const Cart = () => {
                     <div className='pt-[55px] flex items-center'>
                     <div className='pr-[34px]'><img src={cartimg} alt="cart-img" /></div>
                     <div className='flex gap-[69px]'>
-                    <p className='text-[16px] font-normal font-popins text-[#9F9F9F]'>Asgaard sofa</p>
+                    <p className='text-[16px] font-normal font-popins text-[#9F9F9F]'>gxhg</p>
                     <p className='text-[16px] font-normal font-popins text-[#9F9F9F]'>Rs. 250,000.00</p>
                     <div className='w-[32px] h-[32px] flex justify-center items-center border rounded-[5px]'>1</div>
                     <p>Rs. 250,000.00</p>
@@ -48,7 +67,7 @@ const Cart = () => {
                     <h2 className='text-[20px] font-medium font-popins text-[#B88E2F]'>Rs. 250,000.00</h2>
                     </div>
                     <div className='flex justify-center'>
-                    <button className='w-[212px] mt-[42px] py-[14px] text-[20px] font-normal font-popins text-[#000] hover:bg-amber-100 hover:scale-[1.1] duration-[.4s] text-center border rounded-[15px]'>Check Out</button>
+                    <Link to={'/checkout'} className='w-[212px] mt-[42px] py-[14px] text-[20px] font-normal font-popins text-[#000] hover:bg-amber-100 hover:scale-[1.1] duration-[.4s] text-center border rounded-[15px]'>Check Out</Link>
 
                     </div>
 
@@ -64,4 +83,4 @@ const Cart = () => {
   )
 }
 
-export default Cart
+export default CartPage
