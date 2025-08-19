@@ -1,7 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import BreadCrum from '../components/common/BreadCrum'
+import axios from 'axios'
 
 const Checkout = () => {
+
+    const localIds = JSON.parse(localStorage.getItem('productId'))
+
+
+// ------------------ api fatch
+
+const[Product , setProduct] = useState([])
+useEffect(()=>{
+    axios.get('https://api.escuelajs.co/api/v1/products')
+.then((res)=>{setProduct(res.data)})
+.catch((err)=>{console.log(err)})
+} , [])
+
+// ------------- product-filter
+const cartProduct = Product.filter((item)=>{
+    return localIds?.includes(item.id)
+})
+
+
+// ------------- total-price
+const totalPrice = cartProduct.reduce((sum , item)=>{
+    return sum+item.price
+} ,0)
+
+
   return (
     <>
     
@@ -68,26 +94,36 @@ const Checkout = () => {
               {/* ------------- right-side */}
               <div>
                 <div className='w-[533px] border-b pb-[33px]'>
-
 {/* -------------------- product-details */}
                 <div className='flex justify-between items-center'>
                   <h2 className='text-[24px] font-medium font-popins text-[#000]'>Product</h2>
                   <h2 className='text-[24px] font-medium font-popins text-[#000]'>Subtotal</h2>
                 </div>
-                <div className='flex justify-between items-center pt-[14px] pb-[22px]'>
-                  <p className='text-[16px] font-normal font-popins text-[#9F9F9F]'>Asgaard sofa <span className='text-[12px] font-medium font-popins text-[#000]'>x 1</span></p>
-                  <p className='text-[16px] font-light font-popins text-[#000]'>Rs. 250,000.00</p>
-                </div>
-                <div className='flex justify-between items-center pb-[22px]'>
-                  <p className='text-[16px] font-normal font-popins text-[#000]'>Subtotal</p>
-                  <p className='text-[16px] font-light font-popins text-[#000]'>Rs. 250,000.00</p>
-                </div>
-                <div className='flex justify-between items-center'>
-                  <p className='text-[16px] font-normal font-popins text-[#000]'>Total</p>
-                  <h2 className='text-[24px] font-bold font-popins text-[#B88E2F]'>Rs. 250,000.00</h2>
-                </div> 
-              </div>
+                {/* ----------- product name + price */}
 
+                {
+                  cartProduct?.map((item)=>(
+
+                <div className=''>
+
+                <div className='flex justify-between items-center pt-[14px] pb-[22px]'>
+                  <p className='text-[16px] truncate w-[350px] font-normal font-popins text-[#9F9F9F]'>{item.title}<span className='text-[12px] font-medium font-popins text-[#000]'>  x 1</span></p>
+                  <p className='text-[16px] font-light font-popins text-[#000]'>Rp. {item.price}</p>
+                </div>
+
+              
+              </div>
+                  ))
+                }
+                  <div className='flex justify-between items-center'>
+                  <p className='text-[16px] font-normal font-popins text-[#000]'>Total</p>
+                  <h2 className='text-[24px] font-bold font-popins text-[#B88E2F]'>Rs. {totalPrice}</h2>
+                </div> 
+
+
+
+
+                </div>
               <div className='pt-[22px] flex gap-[15px] pb-[11px]'>
                 <input type="checkbox" />
                 <label className='text-[16px] font-normal font-popins text-[#000]' htmlFor="">Direct Bank Transfer</label>

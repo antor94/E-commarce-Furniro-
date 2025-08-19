@@ -11,24 +11,31 @@ import axios from 'axios';
 
 const SinglePage = () => {
 
+  // -------------- slider
     const [currentImg, setCurrentImg] = useState(0);
 
 // ------- perams
-
 const perams = useParams()
 
 
 // ------------------ api fatch
-
 const[Product , setProduct] = useState([])
 useEffect(()=>{
     axios.get(`https://api.escuelajs.co/api/v1/products/${perams.productId}`)
-.then((res)=>{setProduct(res.data)})
-.catch((err)=>{console.log(err)})
+.then((res)=>setProduct(res.data))
+.catch((err)=>console.log(err))
 } , [])
 
 
-console.log(perams.productId)
+
+// -------------- recommendation api fatch
+
+const[recoProduct , setRecoProduct] = useState([])
+useEffect(()=>{
+    axios.get('https://api.escuelajs.co/api/v1/products')
+.then((res)=>setRecoProduct(res.data))
+.catch((err)=>console.log(err))
+} , [])
 
 
   return (
@@ -38,7 +45,7 @@ console.log(perams.productId)
          {/* -------------- slider-section */}
                 <section id='slider' className=''>
                     <div className="container">
-                        <div id='slider-row' className='pt-[32px] flex justify-between'>
+                        <div id='slider-row' className='pt-[32px] flex justify-around'>
                          {/*-------------------  slider */}
               {Product && (
                 <div className="flex flex-col md:flex-row gap-4 md:gap-[30px] w-full md:w-auto mb-6 md:mb-0 items-center md:items-start">
@@ -72,10 +79,9 @@ console.log(perams.productId)
                 </div>
                     )}
                             {/* ------------ right-side */}
-
                             <div className=' '>
                             {/* --------------- heading part */}
-                                <h2 className='text-[42px] font-normal font-popins text-[#000]'>{Product?.title}</h2>
+                                <h2 className='text-[42px] truncate w-[400px]  font-normal font-popins text-[#000]'>{Product?.title}</h2>
                                 <h2 className='text-[24px] font-medium font-popins text-[#9F9F9F]'>Rs. {Product.price}</h2>
 
                                 {/* ----------- rating */}
@@ -158,7 +164,6 @@ console.log(perams.productId)
                             </div>
                         </div>
                     </div>
-
                 </section>
     
     {/* --------------- details section */}
@@ -197,7 +202,7 @@ console.log(perams.productId)
     </section>
 
     {/* ----------------- related product */}
-    <section id='related' className='pb-[92px]'>
+    {/* <section id='related' className='pb-[92px]'>
         <div className="container">
             <div id='related-row ' className=''>
                 <div className='pt-[55px] text-center'><h2 className='text-[36px] font-medium font-popins text-[#000]'>Related Products</h2></div>
@@ -217,9 +222,27 @@ console.log(perams.productId)
 
             </div>
         </div>
+    </section> */}
+    
+        <section id='products'>
+        <div className="container">
+            <div id='products-row'>
+            <div className='text-center pb-[32px]'><h2 className='text-[40px] font-bold font-popins text-[#3A3A3A]'>Our Products</h2></div>
+                {/* ------------- products div */}
+                <div className='flex justify-center flex-wrap gap-[32px]'>
+                    {
+                        recoProduct.slice(0,4)?.map((item , i)=>( 
+                        <ProductCommon proImg={item.images} proH2={item.title} proPrice={item.price} proP={item.category.slug} />
+                     ))
+                    }        
+                </div>
+                {/* ---------- button */}
+                <div className='text-center mt-[100px]'>
+                <Link to={'/allproduct'} className='w-[245px] h-[48px] border px-[82px] py-[12px] text-[16px] hover:bg-[#B88E2F] duration-[.4s]  hover:text-white  font-semibold font-popins  text-[#B88E2F]'>Show More</Link>
+                </div>            
+            </div>
+        </div>
     </section>
-    
-    
     
     
     

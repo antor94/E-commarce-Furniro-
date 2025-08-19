@@ -9,6 +9,7 @@ const CartPage = () => {
 
 const perams = useParams()
 
+    const localIds = JSON.parse(localStorage.getItem('productId'))
 
 // ------------------ api fatch
 
@@ -19,9 +20,10 @@ useEffect(()=>{
 .catch((err)=>{console.log(err)})
 } , [])
 
-console.log(perams)
-
-console.log(Product)
+// ------------- product-filter
+const cartProduct = Product.filter((item)=>{
+    return localIds?.includes(item.id)
+})
 
   return (
     <>
@@ -44,7 +46,11 @@ console.log(Product)
                         </div>
                     </div>
               {/* ------------------ product-data */}
-                    <div className='pt-[55px] flex items-center'>
+
+              {
+                cartProduct?.map((item)=>(
+
+                    <div className='pt-[55px] bg-red-900 flex items-center'>
                     <div className='pr-[34px]'><img src={cartimg} alt="cart-img" /></div>
                     <div className='flex gap-[69px]'>
                     <p className='text-[16px] font-normal font-popins text-[#9F9F9F]'>gxhg</p>
@@ -54,6 +60,11 @@ console.log(Product)
                     <div><button><MdDelete className='text-[28px] text-[#B88E2F]' /></button>  </div>
                         </div>   
                     </div>
+                ))
+              }
+
+
+
             </div>
             {/* -------------- right-side */}
             <div className='w-[393px] mt-[72px] h-[390px] bg-[#F9F1E7]'>
