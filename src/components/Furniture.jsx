@@ -23,7 +23,7 @@ const Furniture = () => {
                     <h2 className='text-[40px] font-bold font-popins text-[#3A3A3A]'>#FuniroFurniture</h2>
                 </div>
                 {/* ------------- all product images */}
-                <div className='flex justify-between relative'>
+                <div className='flex justify-around relative'>
                   {/* ---------- left-side */}
                   <div>
                     <div className='flex gap-[16px] items-end'>
