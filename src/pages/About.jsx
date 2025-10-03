@@ -1,4 +1,5 @@
 import React from 'react'
+import BreadCrum from '../components/common/BreadCrum'
 
 const About = () => {
   return (
@@ -6,6 +7,7 @@ const About = () => {
     
     
     <section id='about'>
+          <BreadCrum />
         <div className="container">
             <div id='about-row'>
 
