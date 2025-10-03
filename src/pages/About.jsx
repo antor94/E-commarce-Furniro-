@@ -9,7 +9,11 @@ const About = () => {
         <div className="container">
             <div id='about-row'>
 
+                {/* ---------------- left -side */}
+
                 
+
+
 
             </div>
         </div>
