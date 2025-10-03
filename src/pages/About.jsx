@@ -1,6 +1,7 @@
 import React from 'react'
 import BreadCrum from '../components/common/BreadCrum'
 import aboutImg from '../assets/images/aboutImg1.png'
+import AboutCommon from '../components/common/AboutCommon'
 
 const About = () => {
   return (
@@ -13,6 +14,8 @@ const About = () => {
             <div id='about-row'>
 
                 {/* ---------------- left -side */}
+
+                <AboutCommon />
 
                 
 
