@@ -7,7 +7,7 @@ const About = () => {
     
     
     <section id='about'>
-          <BreadCrum />
+          <BreadCrum breadContent={'Blog'} />
         <div className="container">
             <div id='about-row'>
 
