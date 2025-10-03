@@ -33,7 +33,7 @@ const handleClose = ()=>{
             <ul className='flex items-center gap-[75px]'>
               <li><Link className='text-[18px] hover:text-[#B88E2F] font-medium font-popins text-[#000]' to={'/'}>Home</Link></li>
               <li><Link className='text-[18px] hover:text-[#B88E2F] font-medium font-popins text-[#000]' to={'/allProduct'}>Shop</Link></li>
-              <li><Link className='text-[18px] hover:text-[#B88E2F] font-medium font-popins text-[#000]' to={'/'}>About</Link></li>
+              <li><Link className='text-[18px] hover:text-[#B88E2F] font-medium font-popins text-[#000]' to={'/about'}>About</Link></li>
               <li><Link className='text-[18px] hover:text-[#B88E2F] font-medium font-popins text-[#000]' to={'/contact'}>Contact</Link></li>
             </ul>
           </div>

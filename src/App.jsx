@@ -11,6 +11,7 @@ import SinglePage from "./pages/SinglePage";
 import Cart from "./components/Cart";
 import Checkout from "./pages/Checkout";
 import CartPage from "./pages/CartPage";
+import About from "./pages/About";
 
 //--------- Simple Preloader Component
 function Preloader() {
@@ -96,6 +97,7 @@ const myRoute = createBrowserRouter(
         <Route path="/SinglePage/:productId" element={<SinglePage />} />
         <Route path="/CartPage" element={<CartPage />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/about" element={<About />} />
       </Route>
     </Route>
   )
