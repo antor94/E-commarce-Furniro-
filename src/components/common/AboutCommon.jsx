@@ -2,13 +2,13 @@ import React from 'react'
 
 const AboutCommon = () => {
   return (
-    <div>
+    <div className='w-[820px] h-[794px]'>
 
 
 
 
 
-        
+
     </div>
   )
 }
