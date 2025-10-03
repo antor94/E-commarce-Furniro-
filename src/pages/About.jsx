@@ -1,5 +1,6 @@
 import React from 'react'
 import BreadCrum from '../components/common/BreadCrum'
+import aboutImg from '../assets/images/aboutImg1.png'
 
 const About = () => {
   return (
