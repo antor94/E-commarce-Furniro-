@@ -3,7 +3,7 @@ import React from 'react'
 import aboutImg from '../../assets/images/aboutImg1.png'
 import { Link } from 'react-router'
 
-const AboutCommon = () => {
+const AboutCommon = ({aboutImg , aboutH2 , aboutP}) => {
   return (
     <div className='w-[820px] h-[794px]'>
 
