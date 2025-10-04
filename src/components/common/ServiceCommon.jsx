@@ -1,16 +1,16 @@
 import React from 'react'
 import seImg from '../../assets/images/Service-customer.png'
 
-const ServiceCommon = () => {
+const ServiceCommon = ({srcImg , srcH , srcP}) => {
   return (
     <>
     
     
     <div className='flex gap-[10px] items-center' >
 
-        <div><img src={seImg} alt="" /></div>
+        <div><img src={srcImg} alt="" /></div>
         <div>
-            <h3 className='text-[25px] font-semibold font-popins text-[#242424]'>High Quality</h3>
+            <h3 className='text-[25px] font-semibold font-popins text-[#242424]'>{srcH}</h3>
             <h5 className='text-[20px] font-medium font-popins text-[#898989] '>crafted from top materials</h5>
         </div>
 
