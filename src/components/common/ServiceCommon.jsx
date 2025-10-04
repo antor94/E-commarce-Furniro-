@@ -6,7 +6,7 @@ const ServiceCommon = () => {
     <>
     
     
-    <div >
+    <div className='flex gap-[10px] items-center' >
 
         <div><img src={seImg} alt="" /></div>
         <div>
