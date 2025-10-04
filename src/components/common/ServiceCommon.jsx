@@ -1,5 +1,4 @@
 import React from 'react'
-import seImg from '../../assets/images/Service-customer.png'
 
 const ServiceCommon = ({srcImg , srcH , srcP}) => {
   return (
