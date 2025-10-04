@@ -11,7 +11,7 @@ const ServiceCommon = ({srcImg , srcH , srcP}) => {
         <div><img src={srcImg} alt="" /></div>
         <div>
             <h3 className='text-[25px] font-semibold font-popins text-[#242424]'>{srcH}</h3>
-            <h5 className='text-[20px] font-medium font-popins text-[#898989] '>crafted from top materials</h5>
+            <h5 className='text-[20px] font-medium font-popins text-[#898989] '>{srcP}</h5>
         </div>
 
     </div>
