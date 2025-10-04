@@ -11,10 +11,12 @@ const About = () => {
     <section id='about'>
           <BreadCrum breadContent={'Blog'} />
         <div className="container">
-            <div id='about-row'>
+            <div id='about-row' className='mt-[106px]'>
 
                 {/* ---------------- left -side */}
 
+                <AboutCommon />
+                <AboutCommon />
                 <AboutCommon />
 
                 
