@@ -1,6 +1,8 @@
 import React from 'react'
 import BreadCrum from '../components/common/BreadCrum'
-import aboutImg from '../assets/images/aboutImg1.png'
+import aboutImg1 from '../assets/images/aboutImg1.png'
+import aboutImg2 from '../assets/images/aboutImg2.png'
+import aboutImg3 from '../assets/images/aboutImg3.png'
 import AboutCommon from '../components/common/AboutCommon'
 
 const About = () => {
@@ -15,9 +17,10 @@ const About = () => {
 
                 {/* ---------------- left -side */}
 
-                <AboutCommon />
-                <AboutCommon />
-                <AboutCommon />
+                <AboutCommon aboutImg={aboutImg1} aboutH2={''} aboutP={''} />
+                <AboutCommon aboutImg={aboutImg2} aboutH2={''} aboutP={''} />
+                <AboutCommon aboutImg={aboutImg3} aboutH2={''} aboutP={''} />
+         
 
                 
 
