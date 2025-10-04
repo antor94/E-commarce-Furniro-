@@ -9,7 +9,7 @@ const AboutCommon = ({aboutImg , aboutH2 , aboutP}) => {
 
         <div className='w-full h-[500px]'><img src={aboutImg} alt="" /> </div>
 
-        <h1 className='text-[30px] font-medium font-popins text-[#000]'>{aboutH2}</h1>
+        <h1 className='text-[30px] mt-[15px] font-medium font-popins text-[#000]'>{aboutH2}</h1>
 
         <div className='w-[817px] mt-[12px] mb-[30px]'><p className='text-[15px] font-normal font-popins text-[#9F9F9F]'>{aboutP}</p></div>
 
