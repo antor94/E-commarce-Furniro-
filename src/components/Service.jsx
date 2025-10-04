@@ -10,7 +10,10 @@ return (
             <div className='flex items-center justify-between'>
 
 
-                <ServiceCommon srcImg={''} srcH={'High Quality'} srcP={''} />
+                <ServiceCommon srcImg={''} srcH={'High Quality'} srcP={'crafted from top materials'} />
+                <ServiceCommon srcImg={''} srcH={'Warranty Protection'} srcP={'Over 2 years'} />
+                <ServiceCommon srcImg={''} srcH={'Free Shipping'} srcP={'Order over 150 $'} />
+                <ServiceCommon srcImg={''} srcH={'High Quality'} srcP={'crafted from top materials'} />
 
 
 
